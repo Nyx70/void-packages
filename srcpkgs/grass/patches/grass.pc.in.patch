@@ -1,0 +1,22 @@
+--- a/grass.pc.in	2021-10-11 10:38:13.932796809 +0200
++++ b/grass.pc.in	2021-10-11 10:39:17.503233830 +0200
+@@ -2,13 +2,13 @@
+ #
+ # See also: grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@ --config
+ 
+-prefix=@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@
+-exec_prefix=@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@
+-libdir=@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@/lib
+-includedir=@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@/include
++prefix=@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@
++exec_prefix=@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@
++libdir=@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@/lib
++includedir=@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@/include
+ 
+ Name: GRASS
+ Description: GRASS GIS
+ Version: @GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@
+-Libs: -L@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@/lib -lgrass_gmath -lgrass_gis -lgrass_datetime -lgrass_gproj -lgrass_raster -lgrass_vector -lgrass_dbmibase -lgrass_dbmiclient -lm -lz
+-Cflags: -I@prefix@/grass-@GRASS_VERSION_MAJOR@.@GRASS_VERSION_MINOR@.@GRASS_VERSION_RELEASE@/include
++Libs: -L@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@/lib -lgrass_gmath -lgrass_gis -lgrass_datetime -lgrass_gproj -lgrass_raster -lgrass_vector -lgrass_dbmibase -lgrass_dbmiclient -lm -lz
++Cflags: -I@prefix@/grass@GRASS_VERSION_MAJOR@@GRASS_VERSION_MINOR@/include
