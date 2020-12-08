@@ -1,0 +1,24 @@
+# Template file for 'python3-OWSLib'
+# Modified by Nyx70 <n.y.x@bluewin.ch>
+#   license=BSD -> BSD-3-Clause
+pkgname=python3-OWSLib
+version=0.25.0
+revision=1
+wrksrc=OWSLib-${version}
+build_style=python3-module
+hostmakedepends="python3-devel python3-setuptools"
+short_desc="OWSLib Python3 modules"
+maintainer="Bo Son <boson@gmx.at>"
+license="BSD-3-Clause"
+homepage="https://geopython.github.io/OWSLib"
+distfiles="https://github.com/geopython/OWSLib/archive/${version}.tar.gz"
+checksum=6ec4fd6545fd255304b87a4a1a4676c48f8b1a898ffa0b97128ade1d46ba9726
+
+do_check() {
+	# skip tests for now. too many missing packages in void-linux
+	:
+}
+
+post_install() {
+	vlicense LICENSE
+}
