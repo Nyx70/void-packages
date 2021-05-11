@@ -1,17 +1,17 @@
 # Template file for 'proj'
 pkgname=proj
-version=6.3.2
+version=8.2.1
 revision=1
 build_style=cmake
-configure_args="-DPROJ_TESTS=OFF"
+configure_args="-DBUILD_TESTING=OFF"
 hostmakedepends="python3"
-makedepends="sqlite-devel"
+makedepends="sqlite-devel tiff-devel libcurl-devel"
 short_desc="Cartographic Projections Library"
 maintainer="John <me@johnnynator.dev>"
 license="MIT"
-homepage="https://proj4.org"
+homepage="https://proj.org"
 distfiles="https://download.osgeo.org/proj/proj-${version}.tar.gz"
-checksum=cb776a70f40c35579ae4ba04fb4a388c1d1ce025a1df6171350dc19f25b80311
+checksum=76ed3d0c3a348a6693dfae535e5658bbfd47f71cb7ff7eb96d9f12f7e068b1cf
 
 post_install() {
 	vlicense COPYING
@@ -22,8 +22,8 @@ proj-devel_package() {
 	short_desc+=" - development files"
 	pkg_install() {
 		vmove usr/include
-		vmove usr/share/man/man3
 		vmove usr/lib/cmake
+		vmove usr/lib/pkgconfig
 		vmove "usr/lib/*.so"
 	}
 }
