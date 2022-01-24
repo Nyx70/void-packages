@@ -1,0 +1,17 @@
+# Template file for 'python3-imutils'
+pkgname=python3-imutils
+version=0.5.4
+revision=1
+wrksrc="imutils-${version}"
+build_style=python3-module
+depends="libopencv-python3"
+short_desc="Basic image processing functions with OpenCV and Python3"
+maintainer="Nyx70 <n.y.x@bluewin.ch>"
+license="MIT"
+homepage="https://github.com/jrosebr1/imutils"
+distfiles="${PYPI_SITE}/i/imutils/imutils-${version}.tar.gz"
+checksum=03827a9fca8b5c540305c0844a62591cf35a0caec199cb0f2f0a4a0fb15d8f24
+
+post_install() {
+        vlicense $FILESDIR/LICENSE.txt
+}
