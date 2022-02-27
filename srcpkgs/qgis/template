@@ -1,7 +1,7 @@
 # Template file for 'qgis'
 pkgname=qgis
 version=3.24.0
-revision=1
+revision=2
 archs="x86_64*"
 wrksrc=QGIS-final-${version//./_}
 build_style=cmake
