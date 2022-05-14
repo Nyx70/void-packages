@@ -1,6 +1,6 @@
 # Template file for 'grass'
 pkgname=grass
-version=8.0.1
+version=8.0.2
 revision=1
 _binver=${version%.*}
 _binver=${_binver//./}
@@ -29,7 +29,7 @@ maintainer="Nyx70 <n.y.x@bluewin.ch>"
 license="GPL-2.0-or-later"
 homepage="https://grass.osgeo.org/"
 distfiles="https://github.com/OSGeo/grass/archive/${version}.tar.gz"
-checksum=e925bf8c44e1809459974457f2ab3c61dd5a24c0655ed026de665d1494f68a96
+checksum=17fcaee33df93dd272eddae0241102a01d9681592352420a885156fbd626393e
 nocross="tries to execute target binaries"
 
 build_options="geos mysql nls pthread postgres"
