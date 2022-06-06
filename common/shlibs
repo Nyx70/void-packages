@@ -4179,3 +4179,4 @@ libgrass_dbmiclient.8.0.so grass-8.0.0_1
 libgrass_vector.8.0.so grass-8.0.0_1
 libgrass_dbmibase.8.0.so grass-8.0.0_1
 libgrass_imagery.8.0.so grass-8.0.0_1
+libspatialindex.so.6 libspatialindex-1.9.3_1
